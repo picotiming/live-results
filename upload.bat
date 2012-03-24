@@ -5,19 +5,16 @@ set event=BBN11DEZ09
 set origin=D:\picOR\ORserver\SEevent\%event%\SEoutput\
 
 :: let this as it is
-set url=https://pico-timing.googlecode.com/svn/trunk/
-set repo=pico-timing
 set file=DBOResDataSingle-1.ore
 set interval=20
 
-set usr=picotiming@gmail.com
+set usr=picotiming
+set project=live-results
+set url=https://github.com/%usr%/%project%/
 set pw=jJ8nJ4SE3cY2
 
 set remotePath=%url%
 
-cd ..
-svn checkout %remotePath% %repo% --username %usr% --password %pw%
-cd %repo%
 copy /Y "%origin%%file%" "%file%"
 svn add %file%
 
