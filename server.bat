@@ -1,7 +1,7 @@
 @echo off
 
 :: set this to the path of the htdocs dir of your apache installation
-set serverPath=D:\xampp\htdocs
+set serverPath=C:\xampp\htdocs
 set eventTitle="Bern by Night 3, R&uuml;fenacht"
 :: Note: escape all umlauts with html entities
 
