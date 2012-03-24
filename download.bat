@@ -11,12 +11,11 @@ set interval=20
 set usr=picotiming
 set project=live-results
 set url=https://github.com/%usr%/%project%/
-set pw=jJ8nJ4SE3cY2
 
 set remotePath=%url%
 
 :Start
-svn update --username %usr% --password %pw%
+svn update
 copy /Y %file% %target%%file%
 
 ping -n %interval% 127.0.0.1>nul
