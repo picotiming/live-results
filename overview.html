@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta content="text/html;charset=iso-8859-1" http-equiv="content-type">
+<title>Live-Resultate</title>
+<meta name="description" content="Live-Resultate auf deinem Smartphone von Orientierungsläufen in der ganzen Schweiz. Bereitgestellt durch picoTIMING.ch">
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.gif">
+
+<script type="text/javascript" src="jquery1.6.4.js"></script>
+<script src="jqtouch/jqtouch.js" type="application/x-javascript" charset="iso-8859-1"></script>
+<style type="text/css" media="screen">@import "jqtouch/jqtouch.css";</style>
+<style type="text/css" media="screen">@import "themes/apple/theme.css";</style>
+
+<script type="text/javascript">
+$.jQTouch({{
+    icon: 'favicon.gif',
+    statusBar: 'default',
+    cacheGetRequests: false,
+    fullScreen: true,
+    preloadImages: [
+        'themes/apple/img/backButton.png',
+        'themes/apple/img/activeButton.png',
+        'themes/apple/img/loading.png'
+        ],
+    useFastTouch: true
+}});</script>
+<style type="text/css">
+@import "themes/apple/tablecells.css";
+</style>
+</head>
+<body>
+<div id="jqt">
+	<div id="home" class="current">
+		<div class="toolbar">
+			<h1>Ranglisten</h1>
+		</div>
+		
+		<div class="info">
+			<h2>{title}</h2>
+		</div>
+	
+		<ul class="rounded">
+			<li style="text-align: left; vertical-align: middle;">
+				<div style="display: block;">live results provided by</div>
+                <img src="picotiming_transparent.gif" title="picoTiming" alt="picoTiming" style="width: 100%; max-width: 227px;"/><br />
+			</li>
+        </ul>
+	
+		<ul class="rounded">
+			{datablock}
+		</ul>
+        
+        <p class="info">&copy; by dola 2012</p>
+	</div>
+</div>
+</body>
+</html>
