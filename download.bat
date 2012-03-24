@@ -15,10 +15,6 @@ set pw=jJ8nJ4SE3cY2
 
 set remotePath=%url%
 
-cd ..
-svn checkout %remotePath% --username %usr% --password %pw%
-cd %repo%
-
 :Start
 svn update --username %usr% --password %pw%
 copy /Y %file% %target%%file%
